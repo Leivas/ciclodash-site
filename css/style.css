@@ -317,10 +317,11 @@ a:hover {
 
 .hero-image .phone-mockup {
     width: 100%;
-    max-width: 400px;
+    max-width: 200px; /* Reduzido de 400px para ~1.5x menor */
     border-radius: 32px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.06);
+    object-fit: contain; /* Garante que a imagem não distorça */
 }
 
 /* ─── FEATURES (Index) ───────────────────────────────────────── */
