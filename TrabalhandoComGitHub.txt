@@ -1,0 +1,15 @@
+Como continuar trabalhando (O ciclo do Git):
+Agora que você está usando Git, o seu fluxo de trabalho para sempre vai ser esse:
+
+Programou e alterou os códigos? Salve os arquivos no VS Code.
+
+No terminal do VS Code, execute estes comandos para enviar as novidades para o GitHub:
+
+bash
+git add .
+git commit -m "Atualizei o layout do blog"
+git push
+(Isso salva suas alterações na nuvem em poucos segundos).
+
+Dica Extra:
+Você pode acessar o link https://github.com/Leivas/ciclodash-site no seu navegador agora mesmo e verá o seu código e as pastas (css, index.html, etc.) lindamente organizados no site do GitHub. Parabéns pelo projeto!
