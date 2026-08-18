@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suporte · CicloDash</title>
+    <meta name="description" content="Suporte, FAQ e contato para o CicloDash. Tire suas dúvidas e relate problemas." />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bicycle"></i>
+                Ciclo<span>Dash</span>
+            </a>
+            <nav class="nav" id="mainNav">
+                <a href="recursos.html">Recursos</a>
+                <a href="download.html">Download</a>
+                <a href="blog.html">Blog</a>
+                <a href="suporte.html">Suporte</a>
+                <a href="download.html" class="btn-nav">
+                    <i class="fas fa-download"></i> Baixar
+                </a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Início</a> / Suporte
+            </div>
+            <h1>Suporte</h1>
+            <p>Tire suas dúvidas, relate problemas ou envie sugestões para melhorar o CicloDash.</p>
+        </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="support-page">
+        <div class="container">
+            <div class="support-grid">
+
+                <!-- FAQ -->
+                <div class="faq-section">
+                    <h2><i class="fas fa-circle-question"></i> Perguntas Frequentes</h2>
+
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            Como iniciar um treino?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Ative o GPS, preencha seu perfil (Configurações → Perfil) e clique em "Iniciar". O app começará a rastrear automaticamente.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            O app funciona sem internet?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Sim! O GPS e todas as funcionalidades locais funcionam offline. Apenas o download de mapas e a integração com clima precisam de internet.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Como cadastrar minha bike?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Acesse Configurações → Minhas Bikes → Adicionar. Preencha o nome, tipo e peso da bike. Você pode cadastrar quantas quiser.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Meus dados são seguros?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Sim! Todos os dados ficam armazenados apenas no seu dispositivo. Nenhuma informação é enviada para servidores externos.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            O que é o gradiente de cores?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            A rota é colorida conforme a velocidade: azul (lento) → verde → amarelo → vermelho (rápido). Isso permite visualizar o desempenho no percurso.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Como reportar um bug?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Use o formulário de contato ao lado selecionando "Bug" como tipo. Inclua o máximo de detalhes possível para facilitar a correção.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM -->
+                <div class="form-section">
+                    <h2><i class="fas fa-envelope"></i> Fale Conosco</h2>
+
+                    <form id="contactForm" action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
+                        <!-- Proteção contra spam -->
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="hidden" name="_subject" value="Contato CicloDash" />
+                        <input type="hidden" name="_next" value="?success=true" />
+
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="type">Tipo de contato</label>
+                            <select id="type" name="type" required>
+                                <option value="">Selecione...</option>
+                                <option value="bug">Bug / Problema</option>
+                                <option value="suggestion">Sugestão</option>
+                                <option value="question">Dúvida</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" placeholder="Descreva sua dúvida, sugestão ou problema..." required></textarea>
+                        </div>
+
+                        <div class="form-submit-row">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Enviar
+                            </button>
+                            <span style="font-size:0.85rem; color:var(--gray-light);">
+                                <i class="fas fa-lock"></i> Seus dados estão seguros
+                            </span>
+                        </div>
+                    </form>
+
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-circle-check"></i>
+                        <strong>Mensagem enviada!</strong> Agradecemos seu contato. Responderemos em breve.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="sobre.html">Sobre</a>
+                <a href="recursos.html">Recursos</a>
+                <a href="download.html">Download</a>
+                <a href="suporte.html">Suporte</a>
+                <a href="blog.html">Blog</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="termos.html">Termos</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 CicloDash · Feito com <i class="fas fa-heart" style="color:var(--orange);"></i> para ciclistas
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // MOBILE TOGGLE
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mainNav = document.getElementById('mainNav');
+        mobileToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => mainNav.classList.remove('open'));
+        });
+
+        // FAQ ACCORDION
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // FORM SUCCESS
+        const urlParams = new URLSearchParams(window.location.search);
+        const successParam = urlParams.get('success');
+        if (successParam === 'true') {
+            document.getElementById('formSuccess').classList.add('show');
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>

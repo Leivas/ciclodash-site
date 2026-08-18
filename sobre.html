@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre · CicloDash</title>
+    <meta name="description" content="Sobre o CicloDash: projeto, roadmap, tecnologias e equipe." />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bicycle"></i>
+                Ciclo<span>Dash</span>
+            </a>
+            <nav class="nav" id="mainNav">
+                <a href="recursos.html">Recursos</a>
+                <a href="download.html">Download</a>
+                <a href="blog.html">Blog</a>
+                <a href="suporte.html">Suporte</a>
+                <a href="download.html" class="btn-nav">
+                    <i class="fas fa-download"></i> Baixar
+                </a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Início</a> / Sobre
+            </div>
+            <h1>Sobre o CicloDash</h1>
+            <p>Conheça a história, o roadmap e as tecnologias por trás do ciclocomputador inteligente.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-page">
+        <div class="container">
+
+            <!-- VISÃO -->
+            <div class="about-section">
+                <h2><i class="fas fa-bullseye"></i> Visão</h2>
+                <div class="vision-box">
+                    <p class="quote">"O ciclocomputador inteligente que cabe no seu bolso."</p>
+                    <p class="author">— CicloDash é mais que um app, é um companheiro de treino que evolui com você.</p>
+                </div>
+                <p>
+                    O CicloDash nasceu para democratizar o acesso a um ciclocomputador de alta performance.
+                    Com tecnologia de ponta e uma experiência intuitiva, ele transforma seu smartphone em
+                    uma ferramenta profissional para análise de treino, navegação e performance.
+                </p>
+            </div>
+
+            <!-- ROADMAP -->
+            <div class="about-section">
+                <h2><i class="fas fa-road"></i> Roadmap</h2>
+                <div class="roadmap">
+                    <div class="roadmap-item">
+                        <span class="version">v1.0</span>
+                        <h4>MVP</h4>
+                        <p>GPS, mapas 3D, histórico e configurações básicas</p>
+                        <span class="status done"><i class="fas fa-check-circle"></i> Concluído</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <span class="version">v1.5</span>
+                        <h4>BLE + Clima</h4>
+                        <p>Sensores, exportação GPX e integração meteorológica</p>
+                        <span class="status in-progress"><i class="fas fa-spinner"></i> Em desenvolvimento</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <span class="version">v2.0</span>
+                        <h4>Treinador Virtual</h4>
+                        <p>IA para alertas de cadência, FC, hidratação e fadiga</p>
+                        <span class="status planning"><i class="fas fa-clock"></i> Planejado</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <span class="version">v3.0</span>
+                        <h4>Ecossistema</h4>
+                        <p>Integração com plataformas, análises avançadas e comunidade</p>
+                        <span class="status planning"><i class="fas fa-clock"></i> Planejado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TECNOLOGIAS -->
+            <div class="about-section">
+                <h2><i class="fas fa-code"></i> Tecnologias</h2>
+                <p style="margin-bottom:16px;">O CicloDash é construído com as melhores ferramentas do ecossistema Android.</p>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <span class="tech-icon"><i class="fab fa-android"></i></span>
+                        <h4>Kotlin</h4>
+                        <p>Linguagem moderna e segura</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-icon"><i class="fas fa-cubes"></i></span>
+                        <h4>Jetpack Compose</h4>
+                        <p>UI declarativa e reativa</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-icon"><i class="fas fa-map"></i></span>
+                        <h4>MapLibre GL</h4>
+                        <p>Mapas 3D open-source</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-icon"><i class="fas fa-database"></i></span>
+                        <h4>Room</h4>
+                        <p>Banco de dados local</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-icon"><i class="fas fa-bolt"></i></span>
+                        <h4>Coroutines</h4>
+                        <p>Assincronismo eficiente</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-icon"><i class="fas fa-brain"></i></span>
+                        <h4>IA / ML</h4>
+                        <p>Treinador Virtual inteligente</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EQUIPE -->
+            <div class="about-section">
+                <h2><i class="fas fa-users"></i> Equipe</h2>
+                <p style="margin-bottom:16px;">Pessoas apaixonadas por tecnologia e ciclismo.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="avatar"><i class="fas fa-user"></i></div>
+                        <h4>Desenvolvedor</h4>
+                        <p>Fundador & Tech Lead</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar"><i class="fas fa-paint-brush"></i></div>
+                        <h4>Designer</h4>
+                        <p>UX/UI & Design</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar"><i class="fas fa-bicycle"></i></div>
+                        <h4>Ciclista-Tester</h4>
+                        <p>Testes reais em estrada</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="sobre.html">Sobre</a>
+                <a href="recursos.html">Recursos</a>
+                <a href="download.html">Download</a>
+                <a href="suporte.html">Suporte</a>
+                <a href="blog.html">Blog</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="termos.html">Termos</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 CicloDash · Feito com <i class="fas fa-heart" style="color:var(--orange);"></i> para ciclistas
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mainNav = document.getElementById('mainNav');
+        mobileToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => mainNav.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>

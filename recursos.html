@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos · CicloDash</title>
+    <meta name="description" content="Todas as funcionalidades do CicloDash: GPS, mapas 3D, histórico, IA e muito mais." />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bicycle"></i>
+                Ciclo<span>Dash</span>
+            </a>
+            <nav class="nav" id="mainNav">
+                <a href="recursos.html">Recursos</a>
+                <a href="download.html">Download</a>
+                <a href="blog.html">Blog</a>
+                <a href="suporte.html">Suporte</a>
+                <a href="download.html" class="btn-nav">
+                    <i class="fas fa-download"></i> Baixar
+                </a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Início</a> / Recursos
+            </div>
+            <h1>Funcionalidades</h1>
+            <p>Tudo que o CicloDash oferece para transformar seu treino. Organizado por categorias para facilitar sua navegação.</p>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-page">
+        <div class="container">
+
+            <!-- CATEGORIA 1: GPS e Mapas -->
+            <div class="category">
+                <div class="category-header">
+                    <span class="icon"><i class="fas fa-satellite-dish"></i></span>
+                    <h2>GPS e Mapas</h2>
+                    <span class="badge-count">5 funcionalidades</span>
+                </div>
+                <div class="features-grid-cat">
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-location-dot"></i></span>
+                        <div class="fi-content">
+                            <h4>GPS Preciso <span class="fi-badge available">Disponível</span></h4>
+                            <p>Rastreamento em tempo real com filtro Kalman, precisão de até 2 metros.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-map"></i></span>
+                        <div class="fi-content">
+                            <h4>Mapas 3D <span class="fi-badge available">Disponível</span></h4>
+                            <p>Visualização com MapLibre GL, relevo e navegação imersiva.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-palette"></i></span>
+                        <div class="fi-content">
+                            <h4>Gradiente de Cores <span class="fi-badge available">Disponível</span></h4>
+                            <p>Rota colorida conforme a velocidade: azul (lento) → vermelho (rápido).</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-signs-post"></i></span>
+                        <div class="fi-content">
+                            <h4>Legenda de Velocidade <span class="fi-badge available">Disponível</span></h4>
+                            <p>SpeedLegend integrada ao mapa para referência rápida.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-mountain"></i></span>
+                        <div class="fi-content">
+                            <h4>Perfil de Elevação <span class="fi-badge available">Disponível</span></h4>
+                            <p>Gráfico longitudinal com ganho/ perda de altitude detalhado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORIA 2: Histórico -->
+            <div class="category">
+                <div class="category-header">
+                    <span class="icon"><i class="fas fa-clock-rotate-left"></i></span>
+                    <h2>Histórico e Análise</h2>
+                    <span class="badge-count">4 funcionalidades</span>
+                </div>
+                <div class="features-grid-cat">
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-rectangle-ad"></i></span>
+                        <div class="fi-content">
+                            <h4>Cards Expansíveis <span class="fi-badge available">Disponível</span></h4>
+                            <p>Histórico com cards que expandem para detalhes completos do treino.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-map-location-dot"></i></span>
+                        <div class="fi-content">
+                            <h4>Mapa no Card <span class="fi-badge available">Disponível</span></h4>
+                            <p>Visualização do percurso diretamente no card do histórico.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-chart-simple"></i></span>
+                        <div class="fi-content">
+                            <h4>Estatísticas Detalhadas <span class="fi-badge available">Disponível</span></h4>
+                            <p>Velocidade média, máxima, cadência, FC, potência e muito mais.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-bicycle"></i></span>
+                        <div class="fi-content">
+                            <h4>Bike Ativa <span class="fi-badge available">Disponível</span></h4>
+                            <p>Filtro por bicicleta e estatísticas individuais por bike.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORIA 3: Controles -->
+            <div class="category">
+                <div class="category-header">
+                    <span class="icon"><i class="fas fa-gamepad"></i></span>
+                    <h2>Controles e Animação</h2>
+                    <span class="badge-count">4 funcionalidades</span>
+                </div>
+                <div class="features-grid-cat">
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-sliders"></i></span>
+                        <div class="fi-content">
+                            <h4>Barra de Progresso <span class="fi-badge available">Disponível</span></h4>
+                            <p>Controle interativo para navegar pelo treino em qualquer ponto.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-gauge-high"></i></span>
+                        <div class="fi-content">
+                            <h4>Velocidade da Animação <span class="fi-badge available">Disponível</span></h4>
+                            <p>Ajuste de 0,5x a 3,0x para revisão rápida ou detalhada.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-arrows-rotate"></i></span>
+                        <div class="fi-content">
+                            <h4>Zoom Out Automático <span class="fi-badge available">Disponível</span></h4>
+                            <p>Visão completa do percurso ao finalizar a animação.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-play"></i></span>
+                        <div class="fi-content">
+                            <h4>Play / Pause / Reset <span class="fi-badge available">Disponível</span></h4>
+                            <p>Controle total sobre a reprodução do seu treino.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORIA 4: Configurações -->
+            <div class="category">
+                <div class="category-header">
+                    <span class="icon"><i class="fas fa-gear"></i></span>
+                    <h2>Configurações e Perfil</h2>
+                    <span class="badge-count">5 funcionalidades</span>
+                </div>
+                <div class="features-grid-cat">
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-bicycle"></i></span>
+                        <div class="fi-content">
+                            <h4>Múltiplas Bikes <span class="fi-badge available">Disponível</span></h4>
+                            <p>Cadastre e gerencie suas bicicletas com estatísticas individuais.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-user"></i></span>
+                        <div class="fi-content">
+                            <h4>Perfil do Usuário <span class="fi-badge available">Disponível</span></h4>
+                            <p>Peso, altura, idade e frequência cardíaca máxima para cálculos precisos.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-moon"></i></span>
+                        <div class="fi-content">
+                            <h4>Tema Noturno / Claro <span class="fi-badge available">Disponível</span></h4>
+                            <p>Alternância automática ou manual para melhor visibilidade.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-lock"></i></span>
+                        <div class="fi-content">
+                            <h4>Trava de Tela <span class="fi-badge available">Disponível</span></h4>
+                            <p>Modo Kiosk para evitar toques acidentais durante o treino.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-volume-high"></i></span>
+                        <div class="fi-content">
+                            <h4>Áudio TTS <span class="fi-badge available">Disponível</span></h4>
+                            <p>Feedback por voz com fallback para inglês.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORIA 5: Futuro -->
+            <div class="category">
+                <div class="category-header">
+                    <span class="icon"><i class="fas fa-rocket"></i></span>
+                    <h2>Em Desenvolvimento</h2>
+                    <span class="badge-count">5 funcionalidades</span>
+                </div>
+                <div class="features-grid-cat">
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-brain"></i></span>
+                        <div class="fi-content">
+                            <h4>Treinador Virtual (IA) <span class="fi-badge soon">Em breve</span></h4>
+                            <p>Alertas de cadência, FC, hidratação e fadiga em tempo real.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-bluetooth"></i></span>
+                        <div class="fi-content">
+                            <h4>BLE <span class="fi-badge soon">Em breve</span></h4>
+                            <p>Suporte para Frequência Cardíaca, Potência e Cadência via Bluetooth.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-file-export"></i></span>
+                        <div class="fi-content">
+                            <h4>Exportação GPX <span class="fi-badge soon">Em breve</span></h4>
+                            <p>Compartilhe seus treinos com outros aplicativos e plataformas.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-cloud-sun"></i></span>
+                        <div class="fi-content">
+                            <h4>Clima Integrado <span class="fi-badge soon">Em breve</span></h4>
+                            <p>Dados meteorológicos em tempo real via MET Norway.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="fi-icon"><i class="fas fa-arrow-trend-up"></i></span>
+                        <div class="fi-content">
+                            <h4>Índices Avançados <span class="fi-badge planning">Planejado</span></h4>
+                            <p>ICE, IEP, IQP e Bike Score para análise profunda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="sobre.html">Sobre</a>
+                <a href="recursos.html">Recursos</a>
+                <a href="download.html">Download</a>
+                <a href="suporte.html">Suporte</a>
+                <a href="blog.html">Blog</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="termos.html">Termos</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 CicloDash · Feito com <i class="fas fa-heart" style="color:var(--orange);"></i> para ciclistas
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mainNav = document.getElementById('mainNav');
+        mobileToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => mainNav.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>
