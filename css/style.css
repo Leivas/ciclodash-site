@@ -1535,3 +1535,77 @@ a:hover {
     font-size: 0.85rem;
     color: var(--gray-light);
 }
+
+/* ─── ESTILOS PÁGINA TERMOS (NOVOS - BASEADO NO SEU HTML) ──── */
+
+.terms-page {
+    padding: 40px 0 80px;
+}
+
+.terms-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.terms-content h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 40px 0 16px;
+    color: var(--white);
+}
+
+.terms-content h2:first-of-type {
+    margin-top: 0;
+}
+.terms-content h2 i {
+    color: var(--orange);
+}
+
+.terms-content p {
+    color: var(--gray-light);
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.terms-content ul {
+    padding-left: 24px;
+    color: var(--gray-light);
+    margin-bottom: 24px;
+}
+.terms-content ul li {
+    margin-bottom: 8px;
+}
+.terms-content ul li strong {
+    color: var(--white);
+}
+
+/* Caixa de Aviso (Amarela) */
+.warning-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: rgba(250, 204, 21, 0.08); /* Fundo amarelo translúcido */
+    border: 1px solid rgba(250, 204, 21, 0.15);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.warning-box i {
+    font-size: 1.8rem;
+    color: #facc15; /* Cor do ícone amarelo */
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.warning-box p {
+    color: var(--white);
+    margin-bottom: 0;
+    font-size: 1.05rem;
+}
+.warning-box p strong {
+    color: #facc15; /* Cor do texto em negrito amarelo */
+}
