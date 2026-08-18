@@ -317,11 +317,26 @@ a:hover {
 
 .hero-image .phone-mockup {
     width: 100%;
-    max-width: 200px; /* Reduzido de 400px para ~1.5x menor */
+    max-width: 200px;
     border-radius: 32px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    object-fit: contain; /* Garante que a imagem não distorça */
+}
+
+.gif-wrapper {
+    background-color: #111111; /* Fundo preto igual ao do site */
+    border-radius: 32px;
+    display: inline-block;
+    padding: 0;
+    overflow: hidden;
+    /* Para garantir que o wrapper fique centralizado igual ao texto */
+    margin: 0 auto; 
+}
+
+.gif-wrapper .phone-mockup {
+    max-width: 270px;
+    border-radius: 32px;
+    display: block;
 }
 
 /* ─── FEATURES (Index) ───────────────────────────────────────── */
