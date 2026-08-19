@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,28 +10,34 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-    <!-- HEADER -->
+    <!-- ════════════════════════════════════════════════════════════
+         HEADER
+         ════════════════════════════════════════════════════════════ -->
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
                 <i class="fas fa-bicycle"></i>
                 Ciclo<span>Dash</span>
             </a>
+
             <nav class="nav" id="mainNav">
+                <a href="index.html"><i class="fas fa-house"></i> Início</a>
                 <a href="recursos.html">Recursos</a>
                 <a href="download.html">Download</a>
                 <a href="blog.html">Blog</a>
-                <a href="suporte.html">Suporte</a>
-                <a href="download.html" class="btn-nav">
-                    <i class="fas fa-download"></i> Baixar
-                </a>
+                <a href="suporte.html" class="active">Suporte</a>
+                <a href="download.html" class="btn-nav"><i class="fas fa-download"></i> Baixar</a>
             </nav>
+
             <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
                 <i class="fas fa-bars"></i>
             </button>
@@ -63,7 +70,8 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            Ative o GPS, preencha seu perfil (Configurações → Perfil) e clique em "Iniciar". O app começará a rastrear automaticamente.
+                            Ative o GPS, preencha seu perfil (Configurações → Perfil) e clique em "Iniciar". O app
+                            começará a rastrear automaticamente.
                         </div>
                     </div>
 
@@ -73,7 +81,8 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            Sim! O GPS e todas as funcionalidades locais funcionam offline. Apenas o download de mapas e a integração com clima precisam de internet.
+                            Sim! O GPS e todas as funcionalidades locais funcionam offline. Apenas o download de mapas e
+                            a integração com clima precisam de internet.
                         </div>
                     </div>
 
@@ -83,7 +92,8 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            Acesse Configurações → Minhas Bikes → Adicionar. Preencha o nome, tipo e peso da bike. Você pode cadastrar quantas quiser.
+                            Acesse Configurações → Minhas Bikes → Adicionar. Preencha o nome, tipo e peso da bike. Você
+                            pode cadastrar quantas quiser.
                         </div>
                     </div>
 
@@ -93,7 +103,8 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            Sim! Todos os dados ficam armazenados apenas no seu dispositivo. Nenhuma informação é enviada para servidores externos.
+                            Sim! Todos os dados ficam armazenados apenas no seu dispositivo. Nenhuma informação é
+                            enviada para servidores externos.
                         </div>
                     </div>
 
@@ -103,7 +114,8 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            A rota é colorida conforme a velocidade: azul (lento) → verde → amarelo → vermelho (rápido). Isso permite visualizar o desempenho no percurso.
+                            A rota é colorida conforme a velocidade: azul (lento) → verde → amarelo → vermelho (rápido).
+                            Isso permite visualizar o desempenho no percurso.
                         </div>
                     </div>
 
@@ -113,7 +125,8 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            Use o formulário de contato ao lado selecionando "Bug" como tipo. Inclua o máximo de detalhes possível para facilitar a correção.
+                            Use o formulário de contato ao lado selecionando "Bug" como tipo. Inclua o máximo de
+                            detalhes possível para facilitar a correção.
                         </div>
                     </div>
                 </div>
@@ -151,7 +164,8 @@
 
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" placeholder="Descreva sua dúvida, sugestão ou problema..." required></textarea>
+                            <textarea id="message" name="message"
+                                placeholder="Descreva sua dúvida, sugestão ou problema..." required></textarea>
                         </div>
 
                         <div class="form-submit-row">
@@ -174,7 +188,9 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ════════════════════════════════════════════════════════════
+         FOOTER
+         ════════════════════════════════════════════════════════════ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
@@ -186,13 +202,16 @@
                 <a href="privacidade.html">Privacidade</a>
                 <a href="termos.html">Termos</a>
             </div>
+
             <div class="footer-social">
                 <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
+
             <div class="footer-copy">
-                &copy; 2026 CicloDash · Feito com <i class="fas fa-heart" style="color:var(--orange);"></i> para ciclistas
+                &copy; 2026 CicloDash · Feito com <i class="fas fa-heart" style="color:var(--orange);"></i> para
+                ciclistas
             </div>
         </div>
     </footer>
@@ -225,4 +244,5 @@
         }
     </script>
 </body>
+
 </html>
