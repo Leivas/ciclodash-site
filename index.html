@@ -23,12 +23,8 @@ HEADER
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet" /> 
 
-    <!-- Font Awesome 6 (ícones) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <!-- CONEXÃO COM O ARQUIVO CSS EXTERNO (AQUI ESTÁ A CORREÇÃO) -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -284,152 +280,23 @@ HEADER
         console.log('🔗 https://ciclodash.com.br');
     </script>
 
-    <!-- ================= TRADUTOR CUSTOMIZADO ESCURO ================= -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
-    /* Botão do tradutor */
-    #custom-translate-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-        background: #1A1A1A;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        color: #fff;
-        border-radius: 50px;
-        padding: 10px 16px;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.85rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-        transition: all 0.3s ease;
-    }
-    #custom-translate-btn:hover {
-        border-color: var(--orange);
-        transform: translateY(-2px);
-    }
-
-    /* Menu flutuante */
-    #custom-translate-menu {
-        display: none;
-        position: fixed;
-        bottom: 80px;
-        right: 20px;
-        z-index: 9999;
-        background: #1A1A1A;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 12px;
-        padding: 16px;
-        min-width: 160px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-        flex-direction: column;
-        gap: 8px;
-    }
-    #custom-translate-menu.show {
-        display: flex;
-    }
-
-    /* Itens do menu */
-    .lang-option {
-        background: transparent;
-        border: none;
-        color: #aaa;
-        padding: 8px 12px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.9rem;
-        text-align: left;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        transition: all 0.2s ease;
-    }
-    .lang-option:hover {
-        background: rgba(255, 255, 255, 0.05);
-        color: #fff;
-    }
-    .lang-option.active {
-        color: var(--orange);
-        font-weight: 600;
-    }
-    .lang-option i {
-        width: 20px;
-        text-align: center;
-    }
-</style>
-
-<div id="custom-translate-btn">
-    <i class="fas fa-language"></i> PT <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i>
-</div>
-<div id="custom-translate-menu">
-    <button class="lang-option active" onclick="changeLang('pt')"><i class="fas fa-flag"></i> Português</button>
-    <button class="lang-option" onclick="changeLang('en')"><i class="fas fa-flag-usa"></i> English</button>
-    <button class="lang-option" onclick="changeLang('es')"><i class="fas fa-flag"></i> Español</button>
-    <button class="lang-option" onclick="changeLang('fr')"><i class="fas fa-flag"></i> Français</button>
-</div>
-
-<!-- O Script Oculto do Google (Não mexa nisso, ele faz a tradução invisível!) -->
-<div id="google_translate_element" style="display: none;"></div>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'pt',
-    includedLanguages: 'pt,en,es,fr',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script>
-    // Lógica do menu flutuante
-    const btn = document.getElementById('custom-translate-btn');
-    const menu = document.getElementById('custom-translate-menu');
-
-    btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        menu.classList.toggle('show');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!menu.contains(e.target) && e.target !== btn) {
-            menu.classList.remove('show');
-        }
-    });
-
-    // Função para trocar o idioma (CORRIGIDA)
-    function changeLang(lang) {
-        // Atualiza o botão principal
-        const langMap = { 'pt': 'PT', 'en': 'EN', 'es': 'ES', 'fr': 'FR' };
-        btn.innerHTML = `<i class="fas fa-language"></i> ${langMap[lang]} <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i>`;
-
-        // Atualiza o menu visual
-        document.querySelectorAll('.lang-option').forEach(el => el.classList.remove('active'));
-        // O 'event' é passado automaticamente pelo onclick no HTML
-        event.target.closest('.lang-option').classList.add('active');
-
-        // Fecha o menu
-        menu.classList.remove('show');
-
-        // 🔥 CORREÇÃO AQUI: Espera o Google carregar e tenta mudar o idioma
-        const checkSelect = setInterval(function() {
-            const select = document.querySelector('select.goog-te-combo');
-            if (select) {
-                select.value = lang;
-                select.dispatchEvent(new Event('change'));
-                clearInterval(checkSelect); // Para o "relógio" quando achar o seletor
-            }
-        }, 100); // Verifica a cada 100 milésimos de segundo
-    }
-</script>
-<!-- =========================================================== -->
+<!-- ================= TRADUTOR MICROSOFT ================= -->
+<div id="MicrosoftTranslatorWidget" class="Dark" style="color:white; position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: #1A1A1A; padding: 10px 16px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); font-family: 'Inter', sans-serif; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(0,0,0,0.5);"></div>
+<script type="text/javascript"> 
+    function MicrosoftTranslatorWidgetInit() { 
+        new Microsoft.Translator.Widgets.Translator({ 
+            include: 'pt', 
+            exclude: 'en,es,fr', 
+            layout: 'Custom', 
+            language: 'pt', 
+            languages: 'pt,en,es,fr' 
+        }, 'MicrosoftTranslatorWidget'); 
+    } 
+</script> 
+<script type="text/javascript" src="https://www.microsoft.com/translator/widget/v1.1/ms translator.js?cb=MicrosoftTranslatorWidgetInit"></script>
+<!-- ============================================================== -->
 
 </body>
 
