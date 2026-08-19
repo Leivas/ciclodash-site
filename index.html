@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <!-- ════════════════════════════════════════════════════════════
@@ -23,8 +23,9 @@ HEADER
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
-        rel="stylesheet" /> 
+        rel="stylesheet" />
 
+    <!-- CSS Global -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -41,7 +42,7 @@ HEADER
                 <a href="download.html" class="btn-nav"><i class="fas fa-download"></i> Baixar</a>
                 <a href="blog.html">Blog</a>
                 <a href="sobre.html">Sobre</a>
-                <a href="suporte.html">Suporte</a>                
+                <a href="suporte.html">Suporte</a>
                 <a href="privacidade.html">Privacidade</a>
                 <a href="termos.html">Termos</a>
             </nav>
@@ -208,6 +209,7 @@ HEADER
             </a>
         </div>
     </section>
+
     <!-- ════════════════════════════════════════════════════════════
              FOOTER
              ════════════════════════════════════════════════════════════ -->
@@ -237,10 +239,9 @@ HEADER
     </footer>
 
     <!-- ════════════════════════════════════════════════════════════
-         JAVASCRIPT
+         JAVASCRIPT (MENU E ANIMAÇÃO)
          ════════════════════════════════════════════════════════════ -->
     <script>
-        // ─── MENU MOBILE ──────────────────────────────────────────
         const mobileToggle = document.getElementById('mobileToggle');
         const mainNav = document.getElementById('mainNav');
 
@@ -248,14 +249,12 @@ HEADER
             mainNav.classList.toggle('open');
         });
 
-        // Fecha o menu ao clicar em um link
         document.querySelectorAll('.nav a').forEach(link => {
             link.addEventListener('click', () => {
                 mainNav.classList.remove('open');
             });
         });
 
-        // ─── ANIMAÇÃO DE ENTRADA DOS CARDS ──────────────────────
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
@@ -274,29 +273,91 @@ HEADER
             observer.observe(card);
         });
 
-        // ─── HERO BADGE ANIMATION ────────────────────────────────
         console.log('🚴 CicloDash · O ciclocomputador inteligente');
         console.log('📊 Versão 75.0 · Em desenvolvimento ativo');
         console.log('🔗 https://ciclodash.com.br');
     </script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- ════════════════════════════════════════════════════════════
+         TRADUTOR GOOGLE PERSONALIZADO (SEM BARRA AMARELA)
+         ════════════════════════════════════════════════════════════ -->
 
-<!-- ================= TRADUTOR MICROSOFT ================= -->
-<div id="MicrosoftTranslatorWidget" class="Dark" style="color:white; position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: #1A1A1A; padding: 10px 16px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); font-family: 'Inter', sans-serif; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(0,0,0,0.5);"></div>
-<script type="text/javascript"> 
-    function MicrosoftTranslatorWidgetInit() { 
-        new Microsoft.Translator.Widgets.Translator({ 
-            include: 'pt', 
-            exclude: 'en,es,fr', 
-            layout: 'Custom', 
-            language: 'pt', 
-            languages: 'pt,en,es,fr' 
-        }, 'MicrosoftTranslatorWidget'); 
-    } 
-</script> 
-<script type="text/javascript" src="https://www.microsoft.com/translator/widget/v1.1/ms-translator.js?cb=MicrosoftTranslatorWidgetInit"></script>
-<!-- ============================================================== -->
+    <!-- CSS para esconder a barra amarela e estilizar o menu escuro -->
+    <style>
+        /* Esconde a barra superior amarela do Google */
+        body { top: 0 !important; }
+        .goog-te-banner-frame.skiptranslate,
+        .goog-te-banner-frame { display: none !important; }
+
+        /* Esconde o pop-up de ferramentas do Google */
+        .goog-tooltip, .goog-tooltip:hover { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
+
+        /* Container do tradutor (Flutuante no canto inferior direito) */
+        #google_translate_element {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            background: #1A1A1A;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+        }
+
+        #google_translate_element:hover {
+            border-color: var(--orange);
+            transform: translateY(-2px);
+        }
+
+        /* Esconde o texto "Com a tecnologia do Google Translate" */
+        .goog-te-gadget {
+            font-family: inherit !important;
+            color: transparent !important;
+            font-size: 0 !important;
+        }
+
+        /* Estilização do Dropdown (A caixinha de idiomas escura) */
+        .goog-te-combo {
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: #fff;
+            background-color: #1A1A1A;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .goog-te-combo:hover {
+            border-color: var(--orange);
+        }
+
+        .goog-te-combo option {
+            background-color: #111;
+            color: #fff;
+        }
+    </style>
+
+    <!-- O Elemento de Tradução -->
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'pt,en,es,fr,de,it',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
