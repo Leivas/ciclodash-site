@@ -336,25 +336,22 @@ a:hover {
 
 /* ─── MOLDE DO MASCOTE ──────────── */
 .gif-wrapper {
-    background: radial-gradient(circle at center, #1A1A1A 0%, #0a0a0a 100%);
+    background: #000000;
     border-radius: 32px;
-    display: inline-flex; /* Muda para inline-flex para se ajustar ao conteúdo */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 20px; /* Dá uma "respirada" dentro da moldura */
+    padding: 8px;
     overflow: hidden;
-    box-shadow: 
-        inset 0 0 40px rgba(0, 0, 0, 0.8),
-        0 0 60px rgba(255, 107, 0, 0.05);
     width: 100%;
-    max-width: 380px; /* Tamanho máximo para não estourar na tela grande */
-    margin: 0 auto;   /* Garante que fique centralizado na coluna */
+    max-width: 380px;
+    margin: 0 auto;
 }
 
 .gif-wrapper .phone-mockup {
     width: 100%;
     height: auto;
-    max-width: 300px; /* O GIF em si fica um pouco menor que a borda */
+    max-width: 200px !important;
     border-radius: 32px;
     display: block;
 }
@@ -545,7 +542,7 @@ a:hover {
 /* ─── SCREENSHOT (Index) ─────────────────────────────────────── */
 .screenshot-section {
     padding: 80px 0;
-    background: var(--black);
+    background: #000000;
 }
 
 .screenshot-section .container {
@@ -1886,4 +1883,57 @@ a:hover {
 .warning-box p strong {
     color: #facc15;
     /* Cor do texto em negrito amarelo */
+}
+
+/* ─── DESCRIÇÃO DO BIGO (MASCOTE) ───────────────────────────── */
+.bigo-description {
+    text-align: center;
+    max-width: 380px;
+    margin: 16px auto 0;
+    color: var(--gray-light);
+}
+
+.bigo-description h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bigo-description p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.bigo-description strong {
+    color: var(--orange);
+}
+
+.bigo-functions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 10px 14px;
+}
+
+.bigo-functions i {
+    color: var(--orange);
+    margin-right: 4px;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
