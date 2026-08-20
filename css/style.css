@@ -1937,3 +1937,73 @@ a:hover {
     align-items: center;
     justify-content: center;
 }
+
+/* ─── AJUSTE DA SEÇÃO CTA COM IMAGEM DO APP ─────────────────── */
+
+/* Muda o container para usar Flexbox, colocando texto à esquerda e imagem à direita */
+.cta-section .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Ajusta o conteúdo do texto */
+.cta-section .cta-content {
+    flex: 1;
+    text-align: left; /* Alinha o texto à esquerda para dar espaço à imagem */
+}
+
+.cta-section .cta-content h2,
+.cta-section .cta-content p {
+    max-width: 600px; /* Limita a largura do texto para não esticar demais */
+}
+
+.cta-section .cta-content .btn {
+    margin-left: 0; /* Garante que o botão fique alinhado à esquerda */
+}
+
+/* Ajusta a imagem do app */
+.cta-section .cta-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔽 AQUI ESTÁ O TAMANHO QUE VOCÊ VAI CONTROLAR 🔽 */
+.cta-section .cta-image img {
+    max-width: 100%;
+    max-height: 380px; /* <--- Altere esse valor para diminuir ou aumentar */
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+/* ─── RESPONSIVO PARA CELULARES ──────────────────────────────── */
+@media (max-width: 768px) {
+    .cta-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-section .cta-content {
+        text-align: center;
+    }
+
+    .cta-section .cta-content h2,
+    .cta-section .cta-content p {
+        max-width: 100%;
+    }
+
+    .cta-section .cta-content .btn {
+        margin: 0 auto; /* Centraliza o botão no celular */
+    }
+
+    .cta-section .cta-image img {
+        max-height: 350px;
+    }
+}
