@@ -1964,7 +1964,6 @@ a:hover {
     margin-left: 0; /* Garante que o botão fique alinhado à esquerda */
 }
 
-/* Ajusta a imagem do app */
 .cta-section .cta-image {
     flex: 1;
     display: flex;
@@ -1972,15 +1971,18 @@ a:hover {
     align-items: center;
 }
 
-/* 🔽 AQUI ESTÁ O TAMANHO QUE VOCÊ VAI CONTROLAR 🔽 */
 .cta-section .cta-image img {
     max-width: 100%;
-    max-height: 380px; /* <--- Altere esse valor para diminuir ou aumentar */
+    max-height: 380px;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.cta-section .cta-image img:hover {
+    transform: scale(2.00);
 }
 
 /* ─── RESPONSIVO PARA CELULARES ──────────────────────────────── */
@@ -2006,4 +2008,24 @@ a:hover {
     .cta-section .cta-image img {
         max-height: 350px;
     }
+}
+
+.cta-callout {
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    max-width: 240px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+.cta-callout i {
+    color: #fff;
+    margin-right: 8px;
 }
