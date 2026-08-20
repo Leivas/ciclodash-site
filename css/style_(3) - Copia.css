@@ -334,27 +334,20 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
-/* ─── MOLDE DO MASCOTE ──────────── */
 .gif-wrapper {
     background: radial-gradient(circle at center, #1A1A1A 0%, #0a0a0a 100%);
     border-radius: 32px;
-    display: inline-flex; /* Muda para inline-flex para se ajustar ao conteúdo */
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* Dá uma "respirada" dentro da moldura */
+    display: inline-block;
+    padding: 0;
     overflow: hidden;
+    margin: 0 auto;
     box-shadow: 
         inset 0 0 40px rgba(0, 0, 0, 0.8),
         0 0 60px rgba(255, 107, 0, 0.05);
-    width: 100%;
-    max-width: 380px; /* Tamanho máximo para não estourar na tela grande */
-    margin: 0 auto;   /* Garante que fique centralizado na coluna */
 }
 
 .gif-wrapper .phone-mockup {
-    width: 100%;
-    height: auto;
-    max-width: 300px; /* O GIF em si fica um pouco menor que a borda */
+    max-width: 270px;
     border-radius: 32px;
     display: block;
 }
@@ -426,8 +419,7 @@ a:hover {
 /* ─── CATEGORIAS (CARROSSEL - Index) ─────────────────────────── */
 .categories-section {
     padding: 80px 0;
-    position: relative;
-    
+    position: relative;    
     background: 
         linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, rgba(26, 26, 26, 0.92) 100%),
         url('../assets/images/CicloDash_(MTB).png') center center / cover no-repeat;
@@ -605,7 +597,7 @@ a:hover {
     padding: 80px 0;
     background:
         linear-gradient(135deg, rgba(255, 107, 0, 0.92), rgba(224, 94, 0, 0.94)),
-        url('../assets/images/CicloDash_(Speed_2).png') center 30% / cover no-repeat;
+        url('../assets/images/CicloDash_(Gravel).png') center 30% / cover no-repeat;
     text-align: center;
 }
 
