@@ -223,11 +223,9 @@ a:hover {
 /* ─── HERO (Index) ───────────────────────────────────────────── */
 .hero {
     padding: 140px 0 80px;
+    background: linear-gradient(180deg, var(--black) 0%, var(--dark) 100%);
     position: relative;
-    overflow: hidden;    
-    background: 
-        linear-gradient(180deg, rgba(17, 17, 17, 0.92) 0%, rgba(26, 26, 26, 0.95) 100%),
-        url('../assets/images/CicloDash_(Gravel).png') center 30% / cover no-repeat;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -328,22 +326,19 @@ a:hover {
     width: 100%;
     max-width: 200px;
     border-radius: 32px;
-    box-shadow: 
-        0 0 0 4px rgba(255, 255, 255, 0.05),
-        0 20px 40px rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .gif-wrapper {
-    background: radial-gradient(circle at center, #1A1A1A 0%, #0a0a0a 100%);
+    background-color: #111111;
+    /* Fundo preto igual ao do site */
     border-radius: 32px;
     display: inline-block;
     padding: 0;
     overflow: hidden;
+    /* Para garantir que o wrapper fique centralizado igual ao texto */
     margin: 0 auto;
-    box-shadow: 
-        inset 0 0 40px rgba(0, 0, 0, 0.8),
-        0 0 60px rgba(255, 107, 0, 0.05);
 }
 
 .gif-wrapper .phone-mockup {
@@ -419,10 +414,7 @@ a:hover {
 /* ─── CATEGORIAS (CARROSSEL - Index) ─────────────────────────── */
 .categories-section {
     padding: 80px 0;
-    position: relative;    
-    background: 
-        linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, rgba(26, 26, 26, 0.92) 100%),
-        url('../assets/images/CicloDash_(MTB).png') center center / cover no-repeat;
+    background: var(--dark);
 }
 
 .categories-carousel {
@@ -457,32 +449,18 @@ a:hover {
     scroll-snap-align: start;
     border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow: var(--shadow);
-    background: var(--black);
-}
-
-.category-slide-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    filter: blur(24px) brightness(0.55);
-    transform: scale(1.2);
-    z-index: 0;
 }
 
 .category-slide img {
-    position: relative;
-    z-index: 1;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
 }
 
 .category-slide:hover img {
-    transform: scale(1.04);
+    transform: scale(1.06);
 }
 
 .category-slide-label {
@@ -490,7 +468,6 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2;
     padding: 20px 16px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
     font-weight: 700;

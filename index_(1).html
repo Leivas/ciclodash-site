@@ -176,56 +176,6 @@ HEADER
     </section>
 
     <!-- ════════════════════════════════════════════════════════════
-         CATEGORIAS (CARROSSEL)
-         ════════════════════════════════════════════════════════════ -->
-    <section class="categories-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Para todo tipo de pedal</h2>
-                <p>Do asfalto à trilha, o CicloDash se adapta ao seu estilo</p>
-            </div>
-
-            <div class="categories-carousel">
-                <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" aria-label="Anterior">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <div class="carousel-track" id="carouselTrack">
-                    <div class="category-slide">
-                        <div class="category-slide-bg" style="background-image:url('assets/images/CicloDash_(Speed_1).png');"></div>
-                        <img src="assets/images/CicloDash_(Speed_1).png" alt="Ciclismo speed com CicloDash" loading="lazy" />
-                        <div class="category-slide-label"><i class="fas fa-bolt"></i> Speed</div>
-                    </div>
-                    <div class="category-slide">
-                        <div class="category-slide-bg" style="background-image:url('assets/images/CicloDash_(MTB).png');"></div>
-                        <img src="assets/images/CicloDash_(MTB).png" alt="Mountain bike com CicloDash" loading="lazy" />
-                        <div class="category-slide-label"><i class="fas fa-mountain"></i> MTB</div>
-                    </div>
-                    <div class="category-slide">
-                        <div class="category-slide-bg" style="background-image:url('assets/images/CicloDash_(Urbano).png');"></div>
-                        <img src="assets/images/CicloDash_(Urbano).png" alt="Ciclismo urbano com CicloDash" loading="lazy" />
-                        <div class="category-slide-label"><i class="fas fa-city"></i> Urbano</div>
-                    </div>
-                    <div class="category-slide">
-                        <div class="category-slide-bg" style="background-image:url('assets/images/CicloDash_(Gravel).png');"></div>
-                        <img src="assets/images/CicloDash_(Gravel).png" alt="Gravel com CicloDash" loading="lazy" />
-                        <div class="category-slide-label"><i class="fas fa-road"></i> Gravel</div>
-                    </div>
-                    <div class="category-slide">
-                        <div class="category-slide-bg" style="background-image:url('assets/images/CicloDash_(Speed_2).png');"></div>
-                        <img src="assets/images/CicloDash_(Speed_2).png" alt="Ciclismo speed com CicloDash" loading="lazy" />
-                        <div class="category-slide-label"><i class="fas fa-bolt"></i> Speed</div>
-                    </div>
-                </div>
-
-                <button class="carousel-arrow carousel-arrow--next" id="carouselNext" aria-label="Próximo">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- ════════════════════════════════════════════════════════════
          SCREENSHOT
          ════════════════════════════════════════════════════════════ -->
     <section class="screenshot-section">
@@ -330,27 +280,6 @@ HEADER
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
-
-        // ─── CARROSSEL DE CATEGORIAS ─────────────────────────────
-        const carouselTrack = document.getElementById('carouselTrack');
-        const carouselPrev = document.getElementById('carouselPrev');
-        const carouselNext = document.getElementById('carouselNext');
-
-        if (carouselTrack && carouselPrev && carouselNext) {
-            const getScrollStep = () => {
-                const slide = carouselTrack.querySelector('.category-slide');
-                const gap = parseInt(getComputedStyle(carouselTrack).gap) || 24;
-                return slide ? slide.offsetWidth + gap : 300;
-            };
-
-            carouselPrev.addEventListener('click', () => {
-                carouselTrack.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
-            });
-
-            carouselNext.addEventListener('click', () => {
-                carouselTrack.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
-            });
-        }
 
         // ─── HERO BADGE ANIMATION ────────────────────────────────
         console.log('🚴 CicloDash · O ciclocomputador inteligente');
